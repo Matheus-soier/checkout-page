@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-body: 'poppins', sans-serif;
+  --color-btn: #220930;
+}
+
+body {
+  font-family: var(--font-body);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eee;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  max-width: 1600px;
+  max-height: 900px;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.left {
+  width: 500px;
+  background-image: url('../images/bg-main-desktop.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.images-card {
+  position: absolute;
+  left: 30%;
+}
+
+.card-back {
+  margin: 25px 0 0 80px;
+}
+
+.form-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.form-card form fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+fieldset {
+  border: 0;
+}
+
+.form-card label {
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.form-card input {
+  margin: 5px 0 15px 0;
+  outline: 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #dfdfdf;
+  width: 100%;
+}
+
+.form-card .valCvc {
+  width: 70px;
+  margin-right: 5px;
+}
+
+.form-card .valCvc:nth-child(2) {
+  margin-right: 15px;
+}
+
+.inline-form .cvc {
+  display: inline-block;
+}
+
+.cvc .cvc-input {
+  width: 100%;
+}
+
+#btn-submit {
+  width: 100%;
+  border: 0;
+  color: white;
+  background-color: var(--color-btn);
+  border-radius: 5px;
+  padding: 13px;
+  margin-top: 20px;
+  cursor: pointer;
+}

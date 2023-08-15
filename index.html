@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout Payment</title>
+  <link rel="shortcut icon" href="assets/images/favicon-32x32.png" type="image/x-icon">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="left">
+      <div class="images-card">
+        <div class="card-front">
+          <img src="assets/images/bg-card-front.png" alt="Dados do cartão parte da frente">
+        </div>
+        <div class="card-back">
+          <img src="assets/images/bg-card-back.png" alt="Dados do cartão parte de trás">
+        </div>
+      </div>
+    </div>
+    <div class="right">
+      <div class="form-card">
+        <form action="POST">
+          <fieldset>
+            <label for="cardName">
+              cardholder name
+              <input type="text" name="cardName" id="cardName" placeholder="e.g. Jane Appleseed" required>
+            </label>
+            <label for="cardNumber">
+              card number
+              <input type="number" name="cardNumber" id="cardNumber" placeholder="e.g. 1234 5678 9123 0000" required>
+            </label>
+            <div class="inline-form">
+              <div class="cvc">
+                <label for="cardDataEx">
+                  exp. data (mm/yy)
+                  <div class="inline-input">
+                    <input class="valCvc" type="number" name="cardDataExMM" id="cardDataExMM" placeholder="MM" required>
+                    <input class="valCvc" type="number" name="cardDataExYY" id="cardDataExYY" placeholder="YY" required>
+                  </div>
+                </label>
+              </div>
+              <div class="cvc">
+                <label for="cardCvc">
+                  cvc
+                  <input class="numeroInputCvc cvc-input" type="number" name="cardCvc" id="cardCvc"
+                    placeholder="e.g. 123" required>
+                </label>
+              </div>
+            </div>
+          </fieldset>
+          <button id="btn-submit" type="submit">Confirm</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="assets/js/index.js"></script>
+</body>
+
+</html>
