@@ -23,7 +23,6 @@ body {
   height: 100vh;
   width: 100vw;
   max-width: 1600px;
-  max-height: 900px;
   background-color: #fff;
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -46,8 +45,12 @@ body {
   left: 30%;
 }
 
+.card-front {
+  margin-left: 70px;
+}
+
 .card-back {
-  margin: 25px 0 0 80px;
+  margin: 15px 0 0 150px;
 }
 
 .form-card {
@@ -81,6 +84,8 @@ fieldset {
   border-radius: 5px;
   border: 1px solid #dfdfdf;
   width: 100%;
+  text-transform: uppercase;
+  box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.164);
 }
 
 .form-card .valCvc {
@@ -109,4 +114,226 @@ fieldset {
   padding: 13px;
   margin-top: 20px;
   cursor: pointer;
+  font-weight: bold;
 }
+
+.card-front img,
+.card-back img {
+  width: 370px;
+}
+
+.card-back p {
+  position: absolute;
+  top: 72%;
+  left: 85%;
+  color: #fff;
+  font-size: 17px;
+}
+
+#numero-card {
+  position: absolute;
+  top: 25%;
+  color: #fff;
+  left: 20%;
+  font-size: 28px;
+}
+
+#nome-card {
+  position: absolute;
+  top: 36%;
+  left: 20%;
+  color: #fff;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+#validade-card {
+  position: absolute;
+  top: 36%;
+  font-size: 15px;
+  left: 69%;
+  color: #fff;
+}
+
+#foto-card {
+  position: absolute;
+  top: 7%;
+  left: 20%;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+#foto-card-small {
+  position: absolute;
+  top: 10%;
+  left: 30%;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #fff;
+}
+
+input::placeholder {
+  text-transform: lowercase;
+  color: #99999997;
+}
+
+@media (max-width: 1300px) {
+  .left {
+    width: 300px;
+  }
+
+  .card-front img,
+  .card-back img {
+    width: 300px;
+  }
+
+  .images-card {
+    left: 0;
+  }
+
+  #numero-card {
+    font-size: 23px;
+  }
+
+  #foto-card {
+    width: 30px;
+    height: 30px;
+  }
+
+  #foto-card-small {
+    width: 20px;
+    height: 20px;
+    top: 9%;
+  }
+
+  #nome-card {
+    font-size: 13px;
+  }
+
+  #validade-card {
+    left: 67%;
+    font-size: 13px;
+  }
+
+  #outputCvc {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .form-card .valCvc {
+    width: 40px;
+  }
+
+  .form-card input {
+    width: 70%;
+  }
+
+  .cvc .cvc-input {
+    width: 50%;
+  }
+
+  #btn-submit {
+    width: 70%;
+  }
+
+  .form-card {
+    margin-left: 15%;
+  }
+}
+
+@media (max-width: 890px) {
+  .card-front img,
+  .card-back img {
+    width: 250px;
+  }
+
+  .left {
+    width: 250px;
+  }
+
+  .card-back {
+    margin-left: 100px;
+  }
+
+  .form-card {
+    margin-left: 25%;
+  }
+
+  #numero-card {
+    font-size: 17px;
+    left: 25%;
+  }
+
+  #foto-card {
+    width: 25px;
+    height: 25px;
+    left: 25%;
+  }
+
+  #foto-card-small {
+    width: 15px;
+    height: 15px;
+    top: 9%;
+    left: 35%;
+  }
+
+  #nome-card {
+    font-size: 11px;
+    left: 25%;
+  }
+
+  #validade-card {
+    left: 76%;
+    font-size: 11px;
+  }
+
+  #outputCvc {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 690px) {
+  .container {
+    grid-template-columns: 1fr;
+    height: 100vh;
+  }
+
+  .rigth,
+  .form-card {
+    height: 50vh;
+  }
+
+  .form-card {
+    margin: 0;
+  }
+
+  .form-card .valCvc {
+    width: 70px;
+  }
+
+  .form-card input {
+    width: 100%;
+  }
+
+  .cvc .cvc-input {
+    width: 100%;
+  }
+
+  #btn-submit {
+    width: 100%;
+  }
+  
+  .left {
+    width: 100vw;
+    height: 30vh;
+  }
+
+  .images-card {
+    left: 10%;
+  }
+
+  }

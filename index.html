@@ -15,19 +15,26 @@
       <div class="images-card">
         <div class="card-front">
           <img src="assets/images/bg-card-front.png" alt="Dados do cartão parte da frente">
+          <div id="foto-card"></div>
+          <div id="foto-card-small"></div>
+          <p id="numero-card">0000 0000 0000 0000</p>
+          <p id="nome-card">JANE APPLESEED</p>
+          <p id="validade-card">00/00</p>
         </div>
         <div class="card-back">
           <img src="assets/images/bg-card-back.png" alt="Dados do cartão parte de trás">
+          <p id="outputCvc">000</p>
         </div>
       </div>
     </div>
     <div class="right">
       <div class="form-card">
-        <form action="POST">
+        <form>
           <fieldset>
             <label for="cardName">
               cardholder name
-              <input type="text" name="cardName" id="cardName" placeholder="e.g. Jane Appleseed" required>
+              <input type="text" name="cardName" id="cardName" placeholder="e.g. Jane Appleseed" required
+                maxlength="25">
             </label>
             <label for="cardNumber">
               card number
@@ -38,8 +45,10 @@
                 <label for="cardDataEx">
                   exp. data (mm/yy)
                   <div class="inline-input">
-                    <input class="valCvc" type="number" name="cardDataExMM" id="cardDataExMM" placeholder="MM" required>
-                    <input class="valCvc" type="number" name="cardDataExYY" id="cardDataExYY" placeholder="YY" required>
+                    <input class="valCvc" type="number" name="cardDataExMM" id="cardDataExMM" placeholder="MM" required
+                      oninput="concatenaValidade()">
+                    <input class="valCvc" type="number" name="cardDataExYY" id="cardDataExYY" placeholder="YY" required
+                      oninput="concatenaValidade()">
                   </div>
                 </label>
               </div>
