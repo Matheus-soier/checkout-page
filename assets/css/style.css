@@ -294,7 +294,7 @@ body {
     background-image: linear-gradient(170deg, #ffffff, #ffffff, #ffffff, #ffffff);
     height: 100vh;
   }
-  
+
   .container {
     flex-direction: column;
     box-shadow: none;
@@ -337,4 +337,80 @@ body {
     top: -8%;
     left: 5%;
   }
+}
+
+@media (max-width: 440px) {
+
+  .cardFront img,
+  .cardBack img {
+    width: 290px;
+  }
+
+  .cardFront {
+    top: 69%;
+    left: -2%;
+    z-index: 99;
+  }
+
+  .cardBack {
+    top: 4%;
+    left: 2%;
+  }
+
+  .containerWrap {
+    width: 250px;
+  }
+}
+
+@media (max-width: 335px) {
+  .cardFront img,
+  .cardBack img {
+    width: 250px;
+  }
+  .cardFront {
+    top: 73%;
+    left: -2%;
+    z-index: 99;
+  }
+
+  .cardBack {
+    top: 16%;
+    left: 2%;
+  }
+
+  .containerWrap {
+    width: 250px;
+  }  
+
+  #cardNumber {
+    font-size: 20px;
+    top: 52%;
+    left: 6%;
+  }
+
+  #cardName {
+    font-size: 13px;
+    top: 75%;
+    left: 6%;
+  }
+
+  #cardVal {
+    font-size: 13px;
+    top: 75%;
+    left: 76%;
+}
+
+#numberCvc {
+  color: #fff;
+  font-size: 15px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 40%;
+  left: 76%;
+}
+
+.imgCardSmall {
+  top: 13.5%;
+  left: 23%;
+}
 }
