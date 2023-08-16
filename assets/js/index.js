@@ -1,11 +1,11 @@
-let inputCvc = document.querySelector('.numeroInputCvc');
-let outputCvc = document.querySelector('#outputCvc')
-let inputValMm = document.getElementById('cardDataExMM');
-let inputValYy = document.getElementById('cardDataExYY');
-let inputCardNumber = document.querySelector('#cardNumber');
-let outputCardNumber = document.querySelector('#numero-card');
-let inputNameCard = document.querySelector('#cardName');
-let outputNameCard = document.querySelector('#nome-card');
+let inputCvc = document.querySelector('#cvcNumber');
+let outputCvc = document.querySelector('#numberCvc')
+let inputValMm = document.getElementById('monthNumber');
+let inputValYy = document.getElementById('yearNumber');
+let inputCardNumber = document.querySelector('#numberCard');
+let outputCardNumber = document.querySelector('#cardNumber');
+let inputNameCard = document.querySelector('#nameCard');
+let outputNameCard = document.querySelector('#cardName');
 
 inputNameCard.addEventListener('input', function () {
   if (inputNameCard.value.length > 0) {
@@ -52,14 +52,15 @@ inputCardNumber.addEventListener('input', function () {
   } else {
     outputCardNumber.textContent = '0000 0000 0000 0000'
   }
+
 });
 
 function concatenaValidade() {
-  let validadeMM = document.querySelector('#cardDataExMM').value;
-  let validadeYY = document.querySelector('#cardDataExYY').value;
+  let validadeMM = document.querySelector('#monthNumber').value;
+  let validadeYY = document.querySelector('#yearNumber').value;
   let validadeMMeYY = (`${validadeMM}/${validadeYY}`);
-  let outputvalidade = document.querySelector('#validade-card');
-  
+  let outputvalidade = document.querySelector('#cardVal');
+
   if (validadeMM > 0) {
     outputvalidade.textContent = validadeMMeYY
   } else {

@@ -16,324 +16,322 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #eee;
+  height: 100vh;
+  background-image: linear-gradient(170deg, #310D40, #53233A, #2D2958, #1F082B);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .container {
-  height: 100vh;
-  width: 100vw;
-  max-width: 1600px;
-  background-color: #fff;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+  display: flex;
+  width: min-content;
+  height: min-content;
+  align-items: center;
+  justify-content: center;
+  border-radius: 60px;
+  box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.142);
+}
+
+.right,
+.left {
+  height: 600px;
 }
 
 .left {
-  width: 500px;
-  background-image: url('../images/bg-main-desktop.png');
-  background-repeat: no-repeat;
-  background-position: center center;
+  background: black url(../images/bg-main-desktop.png) no-repeat center center;
   background-size: cover;
+  width: 350px;
+  border-radius: 20px 0 0 20px;
+}
+
+.right {
+  background-color: #fff;
+  width: 800px;
+  border-radius: 0 20px 20px 0;
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  align-items: center;
+}
+
+.containerCard {
+  height: 100%;
   position: relative;
 }
 
-.images-card {
+.cardFront img,
+.cardBack img {
+  width: 350px;
+  height: 100%;
+  box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.34);
+  border-radius: 10px;
+}
+
+.cardFront,
+.cardBack {
   position: absolute;
+  transition: all 0.3s ease;
+}
+
+
+.cardFront:hover,
+.cardBack:hover {
+  transform: scale(1.08);
+}
+
+.cardFront {
+  top: 17%;
   left: 30%;
 }
 
-.card-front {
-  margin-left: 70px;
+.cardBack {
+  top: 53%;
+  left: 40%;
 }
 
-.card-back {
-  margin: 15px 0 0 150px;
-}
-
-.form-card {
+.right form fieldset {
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
-
-.form-card form fieldset {
-  display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-fieldset {
   border: 0;
 }
 
-.form-card label {
-  display: flex;
+.right label {
+  display: inherit;
   flex-direction: column;
-  text-transform: uppercase;
-  font-size: 12px;
+  font-size: 15px;
 }
 
-.form-card input {
-  margin: 5px 0 15px 0;
+.right input {
+  font-size: 15px;
   outline: 0;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #dfdfdf;
-  width: 100%;
+  padding: 10px 8px;
+  width: 400px;
+  margin: 5px 0 20px 0;
+  border-radius: 8px;
+  border: 1px solid #999;
   text-transform: uppercase;
-  box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.164);
 }
 
-.form-card .valCvc {
-  width: 70px;
-  margin-right: 5px;
+.right input::placeholder {
+  color: #999;
+  font-size: 15px;
+  text-transform: lowercase;
 }
 
-.form-card .valCvc:nth-child(2) {
-  margin-right: 15px;
-}
-
-.inline-form .cvc {
+.valNumbers {
   display: inline-block;
 }
 
-.cvc .cvc-input {
-  width: 100%;
+#monthNumber,
+#yearNumber {
+  width: 100px;
 }
 
-#btn-submit {
-  width: 100%;
-  border: 0;
-  color: white;
-  background-color: var(--color-btn);
-  border-radius: 5px;
-  padding: 13px;
-  margin-top: 20px;
-  cursor: pointer;
-  font-weight: bold;
+#monthNumber {
+  margin-right: 5px;
 }
 
-.card-front img,
-.card-back img {
-  width: 370px;
+#yearNumber {
+  margin-right: 20px;
 }
 
-.card-back p {
-  position: absolute;
-  top: 72%;
-  left: 85%;
-  color: #fff;
-  font-size: 17px;
+.cvcInline {
+  display: inline-block;
 }
 
-#numero-card {
-  position: absolute;
-  top: 25%;
-  color: #fff;
-  left: 20%;
-  font-size: 28px;
+#cvcNumber {
+  width: 165px;
 }
 
-#nome-card {
-  position: absolute;
-  top: 36%;
-  left: 20%;
-  color: #fff;
-  font-size: 15px;
+#monthNumber::placeholder,
+#yearNumber::placeholder,
+.right label {
   text-transform: uppercase;
 }
 
-#validade-card {
-  position: absolute;
-  top: 36%;
-  font-size: 15px;
-  left: 69%;
+.containerWrap {
+  display: flex;
+  flex-wrap: wrap;
+  width: 400px;
+  justify-content: center;
+}
+
+#btnSubmit {
+  width: 100%;
+  padding: 13px;
+  border: 0;
+  background-color: var(--color-btn);
   color: #fff;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-#foto-card {
-  position: absolute;
-  top: 7%;
-  left: 20%;
+#btnSubmit:hover {
+  background-color: #35104a;
+}
+
+.imgCard {
+  width: 35px;
+  height: 35px;
   background-color: #fff;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-}
-
-#foto-card-small {
   position: absolute;
   top: 10%;
-  left: 30%;
+  left: 6%;
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  border: 1px solid #fff;
 }
 
-input::placeholder {
-  text-transform: lowercase;
-  color: #99999997;
+.imgCardSmall {
+  width: 25px;
+  height: 25px;
+  border: 1px solid white;
+  border-radius: 50%;
+  position: absolute;
+  top: 13.5%;
+  left: 18%;
 }
 
-@media (max-width: 1300px) {
-  .left {
-    width: 300px;
+#cardNumber {
+  color: white;
+  font-size: 27px;
+  position: absolute;
+  top: 54%;
+  left: 6%;
+}
+
+#cardName {
+  color: #fff;
+  font-size: 15px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 77%;
+  left: 6%;
+}
+
+#cardVal {
+  color: #fff;
+  font-size: 15px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 77%;
+  left: 76%;
+}
+
+#numberCvc {
+  color: #fff;
+  font-size: 18px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 41%;
+  left: 78%;
+}
+
+.right form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1240px) {
+  .right {
+    width: 600px;
   }
 
-  .card-front img,
-  .card-back img {
-    width: 300px;
+  .right input {
+    width: 250px;
   }
 
-  .images-card {
-    left: 0;
+  #monthNumber,
+  #yearNumber {
+    width: 60px;
   }
 
-  #numero-card {
-    font-size: 23px;
+  #cvcNumber {
+    width: 100px;
   }
 
-  #foto-card {
-    width: 30px;
-    height: 30px;
+  #btnSubmit {
+    width: 250px;
   }
 
-  #foto-card-small {
-    width: 20px;
-    height: 20px;
-    top: 9%;
+  .cardFront img,
+  .cardBack img {
+    width: 320px;
   }
 
-  #nome-card {
-    font-size: 13px;
+  .cardFront {
+    top: 20%;
   }
 
-  #validade-card {
-    left: 67%;
-    font-size: 13px;
-  }
-
-  #outputCvc {
-    font-size: 13px;
+  #cardNumber {
+    font-size: 24px;
   }
 }
 
 @media (max-width: 1000px) {
-  .form-card .valCvc {
-    width: 40px;
-  }
-
-  .form-card input {
-    width: 70%;
-  }
-
-  .cvc .cvc-input {
-    width: 50%;
-  }
-
-  #btn-submit {
-    width: 70%;
-  }
-
-  .form-card {
-    margin-left: 15%;
-  }
-}
-
-@media (max-width: 890px) {
-  .card-front img,
-  .card-back img {
-    width: 250px;
-  }
-
   .left {
-    width: 250px;
+    width: 300px;
   }
 
-  .card-back {
-    margin-left: 100px;
+  .right {
+    width: 500px;
   }
 
-  .form-card {
-    margin-left: 25%;
-  }
-
-  #numero-card {
-    font-size: 17px;
-    left: 25%;
-  }
-
-  #foto-card {
-    width: 25px;
-    height: 25px;
-    left: 25%;
-  }
-
-  #foto-card-small {
-    width: 15px;
-    height: 15px;
-    top: 9%;
-    left: 35%;
-  }
-
-  #nome-card {
-    font-size: 11px;
-    left: 25%;
-  }
-
-  #validade-card {
-    left: 76%;
-    font-size: 11px;
-  }
-
-  #outputCvc {
-    font-size: 11px;
-  }
-}
-
-@media (max-width: 690px) {
-  .container {
-    grid-template-columns: 1fr;
-    height: 100vh;
-  }
-
-  .rigth,
-  .form-card {
-    height: 50vh;
-  }
-
-  .form-card {
-    margin: 0;
-  }
-
-  .form-card .valCvc {
-    width: 70px;
-  }
-
-  .form-card input {
-    width: 100%;
-  }
-
-  .cvc .cvc-input {
-    width: 100%;
-  }
-
-  #btn-submit {
-    width: 100%;
-  }
-  
-  .left {
-    width: 100vw;
-    height: 30vh;
-  }
-
-  .images-card {
+  .cardFront {
     left: 10%;
   }
 
+  .cardBack {
+    left: 20%;
   }
+}
+
+@media (max-width: 840px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .right {
+    height: 60vh;
+    border-radius: 0;
+    width: 100vw;
+  }
+
+  .left {
+    height: 40vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container {
+    height: 100vh;
+  }
+
+  .containerCard {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cardFront,
+  .cardBack {
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+
+  .cardFront {
+    top: 68%;
+    left: -5%;
+    z-index: 99;
+  }
+
+  .cardBack {
+    top: -8%;
+    left: 5%;
+  }
+}
