@@ -61,7 +61,7 @@ function concatenaValidade() {
   let validadeMMeYY = (`${validadeMM}/${validadeYY}`);
   let outputvalidade = document.querySelector('#cardVal');
 
-  if (validadeMM > 0) {
+  if (validadeMM >= 0) {
     outputvalidade.textContent = validadeMMeYY
   } else {
     outputvalidade.textContent = '00/00'
